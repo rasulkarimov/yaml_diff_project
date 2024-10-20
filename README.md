@@ -21,13 +21,9 @@ python3 -m pip install -r requirements.txt
 python3 compare_files.py
 ```
 
-## Running Tests
+## Running Unit Tests
 ```text
 python3 -m unittest discover
-```
-Alternatively, pytest can be used if it's installed:
-```text
-pytest
 ```
 
 ## Usage
