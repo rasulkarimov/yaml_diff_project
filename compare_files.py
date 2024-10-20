@@ -28,8 +28,8 @@ def print_diff(current_file, desired_file):
         print("\nThe following items were changed:")
         for item in changed:
             print(colored(f"~  {item['path']}:", 'yellow'))
-            print(f"    old value: {item['old_value']}")
-            print(f"    new value: {item['new_value']}")
+            print(colored(f"    old value: {item['old_value']}", 'red'))
+            print(colored(f"    new value: {item['new_value']}", 'green'))
     else:
         print("\nNo items were changed.")
     
