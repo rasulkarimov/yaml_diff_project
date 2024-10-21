@@ -23,8 +23,7 @@ python3 compare_files.py
 
 Output example:
 
-<img width="677" alt="image" src="https://github.com/user-attachments/assets/48817e15-d5a8-4cf8-8b45-62bec087702d">
-
+<img width="667" alt="image" src="https://github.com/user-attachments/assets/d8f5f467-1ae3-44fa-8fae-eeaf1f5eed11">
 
 ## Running Unit Tests
 ```text
