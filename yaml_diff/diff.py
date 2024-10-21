@@ -11,10 +11,26 @@ def compare_dicts(current, desired, path: str = ""):
     
     for key in current:
         if key not in desired:
-            removed.append({f"{path}.{key}": current[key]})
+            if isinstance(current[key], list):
+              current_value = current[key]
+              desired_value = []
+              rem, add, chg = compare_lists(current_value, desired_value, f"{path}.{key}")
+              removed.extend(rem)
+              added.extend(add)
+              changed.extend(chg)
+            else:
+              removed.append({f"{path}.{key}": current[key]})
             
     for key in desired:
         if key not in current:
+          if isinstance(desired[key], list):
+            current_value = []
+            desired_value = desired[key]
+            rem, add, chg = compare_lists(current_value, desired_value, f"{path}.{key}")
+            removed.extend(rem)
+            added.extend(add)
+            changed.extend(chg)
+          else:
             added.append({f"{path}.{key}": desired[key]})
 
     for key in current:
