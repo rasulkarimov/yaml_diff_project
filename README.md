@@ -15,11 +15,15 @@ pip install -e .
 ```
 The -e flag installs the package in editable mode, meaning any changes you make to the code will reflect immediately.
 
-Compare files to check task requirements:
+Compare the files to verify the task requirements:
 ```text
 python3 -m pip install -r requirements.txt
 python3 compare_files.py
 ```
+
+Output example:
+<img width="674" alt="image" src="https://github.com/user-attachments/assets/e760bd86-3787-4826-bb46-753eab5b67fc">
+
 
 ## Running Unit Tests
 ```text
